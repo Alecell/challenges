@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: #c8c5c8;
+}
+
+.form-wrap {
+  display: flex;
+  flex-direction: column;
+  max-width: 270px;
+  margin: 89px;
+}
+
+.input {
+  padding: 13px 8px;
+  box-shadow: 0px 1px 6px rgb(0 0 0 / 52%);
+  border: 0;
+  border-radius: 9px;
+  margin-top: 21px;
+  outline: none;
+  caret-color: #c8c5c8;
+  transition: .1s all linear, 2s padding ease-in;
+}
+
+.input.right-broke-animation {
+  animation: right-broke-animation 1s linear forwards;
+}
+
+.input.left-broke-animation {
+  animation: left-broke-animation 1s linear forwards;
+}
+
+.input:focus {
+  position: relative;
+  z-index: 5;
+}
+
+.input:first-child {
+  margin-top: 0;
+}
+
+.submit {
+  margin-top: 55px;
+  border: none;
+  background-color: #ff0036;
+  color: white;
+  padding: 13px;
+  border-radius: 1000px;
+  cursor: pointer;
+}
+
+.origin-right {
+  transform-origin: center right;
+}
+
+.origin-left {
+  transform-origin: left center;
+}
+
+@keyframes right-broke-animation {
+  0% {
+    transform: rotate(-34deg);
+  }
+  10% {
+    transform: rotate(-95deg);
+  }
+  30% {
+    transform: rotate(-87deg);
+  }
+  65%  {
+    transform: rotate(-91deg);
+  }
+  100% {
+    transform: rotate(-89deg);
+  }
+}
+
+@keyframes left-broke-animation {
+  10% {
+    transform: rotate(95deg);
+  }
+  30% {
+    transform: rotate(87deg);
+  }
+  65%  {
+    transform: rotate(91deg);
+  }
+  100% {
+    transform: rotate(89deg);
+  }
+}
